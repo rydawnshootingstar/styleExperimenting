@@ -1,0 +1,15 @@
+@import '../../styles/partials/variables';
+
+.button {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  box-shadow: 6px 6px 12px rgba(0,0,0,.08),
+  -6px -6px 12px rgba(255,255,255,1);
+
+  &--large{
+    @extend .button;
+    height: 75px;
+    width: 75px;
+  }
+}
