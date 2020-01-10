@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import styles from "./mega-menu.scss";
 
 class MegaMenu extends Component {
@@ -7,14 +8,12 @@ class MegaMenu extends Component {
 	};
 
 	openMenu = () => {
-		console.log("open menu");
 		this.setState({
 			menuOpen: true
 		});
 	};
 
 	closeMenu = () => {
-		console.log("close menu");
 		this.setState({
 			menuOpen: false
 		});
@@ -51,9 +50,9 @@ class MegaMenu extends Component {
 				) : (
 					<div>
 						<header>
-							<a href="#" className={styles.logo}>
+							<Link className={styles.logo} to="/">
 								My Site
-							</a>
+							</Link>
 							<img src="assets/3Lines.svg" className={styles.menuButton} onClick={this.openMenu}></img>
 						</header>
 

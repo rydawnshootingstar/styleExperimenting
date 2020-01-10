@@ -11,7 +11,7 @@
 
 .phoneContainer {
 	background: rgb(99, 103, 108);
-	background: linear-gradient(0deg, #212020 100%, #272a2d 1%);
+	background: linear-gradient(0deg, $phoneBG-bottom 100%, $phoneBG-top 1%);
 	height: 825px;
 	width: 385px;
 	display: grid;
