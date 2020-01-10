@@ -14,8 +14,8 @@ const AppRouter = () => (
 		<div>
 			<Switch>
 				{/* if something doesn't match a path in this router, it will go to ErrorPage */}
-				<Route path="/" component={HomePage} exact={true} />
-				<Route path="/megamenu" component={MegaMenuPage} exact={true} />
+				<Route path="/home" component={HomePage} exact={true} />
+				<Route path="/" component={MegaMenuPage} exact={true} />
 				<Route path="/neumorphic" component={NeumorphicPage} exact={true} />
 				<Route component={ErrorPage} />
 			</Switch>

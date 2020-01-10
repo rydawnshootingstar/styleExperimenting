@@ -34,8 +34,8 @@ class MegaMenu extends Component {
 								<span>Welcome home bitch</span>
 							</li>
 							<li>
-								<a href="#">about us</a>
-								<span>Who we are</span>
+								<Link to="/neumorphic">Neumorphic Phone Design</Link>
+								<span>Press the buttons!</span>
 							</li>
 							<li>
 								<a href="#">services</a>
@@ -51,13 +51,13 @@ class MegaMenu extends Component {
 					<div>
 						<header>
 							<Link className={styles.logo} to="/">
-								My Site
+								Style Experiments
 							</Link>
 							<img src="assets/3Lines.svg" className={styles.menuButton} onClick={this.openMenu}></img>
 						</header>
 
 						<section>
-							<h1>this is some fancy shit</h1>
+							<h1>fun with css</h1>
 						</section>
 					</div>
 				)}
