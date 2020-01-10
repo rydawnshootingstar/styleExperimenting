@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PhoneContainer from '../components/PhoneContainer/PhoneContainer';
 
 
-class Neumorphic extends Component {
+class NeumorphicPage extends Component {
 	render() {
 		return (
 			<div>
@@ -13,4 +13,4 @@ class Neumorphic extends Component {
 	}
 }
 
-export default Neumorphic;
+export default NeumorphicPage;

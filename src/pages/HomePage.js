@@ -6,7 +6,7 @@ import FancyButton from "../components/FancyButton/FancyButton";
 
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-class Home extends Component {
+class HomePage extends Component {
 	render() {
 		return (
 			<div>
@@ -15,10 +15,11 @@ class Home extends Component {
 				<Button large={true} icon={faCoffee} />
 				<FancyButton label="Fancy" />
 				<Link to="/neumorphic">Neumorphic</Link>
+				<Link to="/megamenu">Mega Menu</Link>
 				<Link to="/nonExistantPage">Custom 404 Page</Link>
 			</div>
 		);
 	}
 }
 
-export default Home;
+export default HomePage;

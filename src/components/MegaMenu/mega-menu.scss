@@ -1,0 +1,108 @@
+@import "../../styles/partials/variables";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+.background {
+	background-color: $gray-300;
+	font-family: "Montserrat";
+    height: 100vh;
+    overflow: hidden;
+}
+
+.backgroundDark {
+	@extend .background;
+	background-color: $black !important;
+	animation: slide-menu 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes slide-menu {
+	0% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 300, 0, 1);
+        opacity: 0;
+        height:30vh;
+	}
+	2.5% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 195.663, 0, 1);
+	}
+	4.9% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 128.099, 0, 1);
+	}
+	9.81% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 51.668, 0, 1);
+	}
+	14.71% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 19.475, 0, 1);
+	}
+	19.62% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.689, 0, 1);
+	}
+	29.43% {
+		transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.391, 0, 1);
+	}
+	39.14% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.113, 0, 1);
+        opacity: 1;
+	}
+	100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        height: 100vh;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+header {
+	padding: 2em;
+	font-size: 2rem;
+
+	.logo {
+		color: $black;
+		font-weight: $font-weight-bold;
+	}
+}
+
+section {
+	padding: 4em;
+
+	h1 {
+		color: $gray-600;
+		font-size: 2.5rem;
+		margin: 1em auto;
+		width: 70%;
+		&::before {
+			content: " ";
+			border-top: 5px solid $gray-700;
+			display: block;
+		}
+	}
+}
+
+.menuButton {
+	width: 30px;
+	float: right;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+	margin: 5% auto 0 auto;
+	padding: 0;
+	width: 80%;
+	display: grid;
+	grid-template-columns: repeat(4, 25%);
+	grid-gap: 15px;
+
+	li > a {
+		color: $white;
+		font-weight: $font-weight-bold;
+		font-size: 1.4em;
+	}
+
+	li > span {
+		display: block;
+		color: rgba($gray-500, $alpha: 0.85);
+		margin-top: 20px;
+	}
+}

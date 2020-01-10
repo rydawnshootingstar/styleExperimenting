@@ -1,11 +1,16 @@
+@import '../../styles/partials/variables';
+
 .phoneHeaderContainer{
     display: flex;
     justify-content: space-between;
     justify-items: baseline;
     align-items: flex-start;
-    margin: 5% 7% 1% 7%;
+    margin: 5% 7% 3% 7%;
 }
 
 .phoneHeaderText{
-    font-size: 1.2rem;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: $font-weight-strong;
+    color: rgba($gray-400, .38);
 }

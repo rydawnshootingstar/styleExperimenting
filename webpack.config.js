@@ -1,14 +1,16 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const SRC_DIR = __dirname + "/src";
 const DIST_DIR = __dirname + "/dist";
+const ASSETS_DIR = __dirname + "/src/assets";
 
-const devMode = process.env.NODE_ENV !== 'production';
+const devMode = process.env.NODE_ENV !== "production";
 
 module.exports = {
-	watch:true,
+	watch: true,
 	entry: [SRC_DIR + "/index.js"],
 	output: {
 		path: DIST_DIR,
@@ -36,13 +38,14 @@ module.exports = {
 				test: /\.(scss|sass|css)$/,
 				exclude: /node_modules/,
 				loaders: [
+					'css-hot-loader',
 					MiniCssExtractPlugin.loader,
 					{
 						loader: "css-loader",
 						options: {
 							modules: true,
 							sourceMap: true,
-							importLoaders: 1//,
+							importLoaders: 1 //,
 							//localIdentName: "[local]___[hash:base64:5]"
 						}
 					},
@@ -63,7 +66,8 @@ module.exports = {
 		new MiniCssExtractPlugin({
 			filename: devMode ? "[name].css" : "[name].[hash].css",
 			chunkFilename: devMode ? "[id].css" : "[id].[hash].css"
-		})
+		}),
+		new CopyPlugin([{ from: ASSETS_DIR, to: DIST_DIR + "/assets" }])
 	],
 	devServer: {
 		contentBase: DIST_DIR,
