@@ -38,8 +38,8 @@ class MegaMenu extends Component {
 								<span>Press the buttons!</span>
 							</li>
 							<li>
-								<a href="#">services</a>
-								<span>What we do</span>
+								<Link to="/therapy">Therapy card</Link>
+								<span>This one just had nice colors</span>
 							</li>
 							<li>
 								<a href="#">contact</a>

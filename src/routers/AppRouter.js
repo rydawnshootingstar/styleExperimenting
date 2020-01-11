@@ -4,7 +4,9 @@ import { createBrowserHistory } from "history";
 import HomePage from "../pages/HomePage";
 import NeumorphicPage from '../pages/NeumorphicPage';
 import MegaMenuPage from '../pages/MegaMenuPage';
+import TherapyPage from '../pages/TherapyPage';
 import ErrorPage from "../pages/ErrorPage";
+
 
 export const history = createBrowserHistory();
 
@@ -16,6 +18,7 @@ const AppRouter = () => (
 				{/* if something doesn't match a path in this router, it will go to ErrorPage */}
 				<Route path="/home" component={HomePage} exact={true} />
 				<Route path="/" component={MegaMenuPage} exact={true} />
+				<Route path="/therapy" component={TherapyPage} exact={true} />
 				<Route path="/neumorphic" component={NeumorphicPage} exact={true} />
 				<Route component={ErrorPage} />
 			</Switch>

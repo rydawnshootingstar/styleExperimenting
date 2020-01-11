@@ -1,0 +1,144 @@
+@import "../../styles/partials/variables";
+
+.therapyPage {
+	background-color: $therapyPink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.therapyContainer {
+	display: grid;
+	background-color: $therapyBlue;
+	grid-template-columns: 4fr 5fr;
+	border-radius: 50px;
+	border: 6px solid $white;
+	height: 75%;
+	margin: auto 10%;
+	width: minmax(400px, 70%);
+}
+
+.therapyLeft {
+	font-size: 0.7em;
+	margin-top: 5%;
+	margin-left: 5%;
+	display: block;
+	ul {
+		li > a {
+			font-weight: 350;
+
+			&[data-tool-tip] {
+				position: relative;
+
+				&:hover::after {
+					transform: scale(1);
+					top: 140%;
+					left: 50%;
+				}
+
+				&::after {
+					content: attr(data-tool-tip);
+					display: block;
+					position: absolute;
+					padding: 1em 2em;
+					font-size: 0.8em;
+					line-height: 1em;
+					white-space: nowrap;
+					background-color: $gray-500;
+					color: $white;
+					font-weight: 500;
+					border-radius: 5px;
+					opacity: 0.9;
+					top: 0;
+					left: 0;
+					transform: scale(0);
+					transition: 150ms ease-out all;
+				}
+			}
+		}
+	}
+}
+
+.therapyTagline {
+	font-size: 4.5em;
+	margin-top: 40%;
+	margin-left: 10%;
+	width: 80%;
+	padding: 0;
+}
+
+.therapyBlurb {
+	font-size: 1.3em;
+	margin-top: 15px;
+	margin-left: 10%;
+	padding: 0;
+	font-weight: 500;
+	opacity: 0.7;
+}
+
+.therapyButton {
+	cursor: pointer;
+	margin-top: 20px;
+	margin-left: 10%;
+	padding: 5px;
+	width: 160px;
+	height: 40px;
+	border-top-left-radius: 60px;
+	border-bottom-right-radius: 60px;
+	background-color: $therapySalmon;
+	color: white;
+	text-align: center;
+	line-height: 35px;
+	font-size: 1.3em;
+	box-shadow: 7px 5px 1px rgba($therapyPink, 1);
+	&:hover {
+		background-color: darken($therapySalmon, 10%);
+	}
+
+	&:active {
+		animation: pressButton ease-in forwards;
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	@keyframes pressButton {
+		from {
+			transform: scale(1);
+		}
+		to {
+			transform: scale(0.9);
+			box-shadow: 7px 5px 1px rgba($therapyPink, 0.6);
+		}
+	}
+	//disable text selection so the button text never gets highlighted
+	//no prefixed version because it is not a supported standard1
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer */
+	-khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+	-webkit-user-select: none; /* Chrome, Safari, and Opera */
+	-webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+.therapyRight {
+	display: block;
+	float: right;
+	margin-left: 30%;
+	height: 100%;
+	width: 70%;
+	background-color: $therapySalmon;
+	border-top-right-radius: 44px;
+	border-top-left-radius: 265px;
+	border-bottom-right-radius: 265px;
+	overflow: hidden;
+
+	.pinkSection {
+		@extend .therapyRight;
+		display: inline-block;
+		width: 100%;
+		margin-top: 55%;
+		border-top-right-radius: 0px;
+		background-color: $therapyPink;
+	}
+}
