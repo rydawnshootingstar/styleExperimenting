@@ -1,9 +1,12 @@
 @import "../../styles/partials/variables";
 
+<<<<<<< HEAD
 .bookAppContainer{
     min-width: 1080px;
 }
 
+=======
+>>>>>>> 355a11f... style links etc
 .header {
 	margin: 0;
 	padding: 0;
@@ -41,14 +44,21 @@
     margin-left: 20%;
     margin-top: 25px;
     display: flex;
+<<<<<<< HEAD
     width: auto;
+=======
+>>>>>>> 355a11f... style links etc
     color: $black;
     line-height: normal;
 }
 .item{
     color: $black;
     margin-left: 80px;
+<<<<<<< HEAD
     font-size: 20px;
+=======
+    font-size: 25px;
+>>>>>>> 355a11f... style links etc
     cursor: pointer;
     &:hover{
         &::after{
@@ -63,6 +73,7 @@
 }
 
 .headerRightMenu{
+<<<<<<< HEAD
     position: fixed;
     margin-left: 80%;
     display: flex;
@@ -81,6 +92,22 @@
 
 
 
+=======
+
+    margin-left: 60%;
+    display: flex;
+
+    &--notifications{
+        &::after{
+            content: ' ';
+            border-radius: 50%;
+            width: 2px;
+            background-color: red; 
+        }
+    }
+}
+
+>>>>>>> 355a11f... style links etc
 .mainContainer {
 	position: absolute;
 	top: 75px;

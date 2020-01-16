@@ -19,7 +19,11 @@ class BookApp extends Component{
 
     render(){
         return (
+<<<<<<< HEAD
             <div className={styles.bookAppContainer}>
+=======
+            <div>
+>>>>>>> 355a11f... style links etc
                 <BookHeader hasNotifications={this.state.hasNotifications} />
                 <BookMain sideBarOpen={this.state.sideBarOpen} toggleSideBar={this.toggleSideBar} closeSideBar={this.closeSideBar}/>
             </div>
