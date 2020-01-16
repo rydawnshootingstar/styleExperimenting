@@ -1,0 +1,127 @@
+@import "../../styles/partials/variables";
+
+.header {
+	margin: 0;
+	padding: 0;
+    width: 100%;
+	position: absolute;
+	height: 75px;
+	background-color: $white;
+	color: $black;
+	box-shadow: -10px -7px 15px rgba(0, 0, 0, 0.5);
+}
+
+.logoBox {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+    margin-top: 15px;
+    height: 45px;
+    width: 45px;
+    line-height: 40px;
+    text-align: center;
+    color: $white;
+    background-color: $black;
+}
+
+.logoText {
+    position: absolute;
+    color: $black;
+    margin-left: 50px;
+    font-weight: 600;
+    margin-top: -35px;
+}
+
+.list{
+    margin-left: 20%;
+    margin-top: 25px;
+    display: flex;
+    color: $black;
+    line-height: normal;
+}
+.item{
+    color: $black;
+    margin-left: 80px;
+    font-size: 25px;
+    cursor: pointer;
+    &:hover{
+        &::after{
+            content: ' ';
+            margin-top: 15px;
+            background-color: $black;
+            display:block;
+            height: 5px;
+            width: auto;
+        }
+    }
+}
+
+.headerRightMenu{
+
+    margin-left: 60%;
+    display: flex;
+
+    &--notifications{
+        &::after{
+            content: ' ';
+            border-radius: 50%;
+            width: 2px;
+            background-color: red; 
+        }
+    }
+}
+
+.mainContainer {
+	position: absolute;
+	top: 75px;
+	left: 0;
+	right: 0;
+	height: 100%;
+	transition: left 0.3s ease-in-out;
+	background-color: $gray-500;
+	overflow-x: hidden;
+}
+
+.mainContainerOpen {
+	@extend .mainContainer;
+}
+
+.sidebarContainer {
+	position: absolute;
+	//top: 75px;
+	right: -300px;
+	height: 100%;
+	width: 300px;
+	transition: right 0.3s ease-in-out;
+	background-color: $white;
+}
+
+.sidebarContainerOpen {
+	@extend .sidebarContainer;
+	right: 0px;
+}
+
+.toggleButton {
+	background-color: $white;
+	display: flex;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+    position: absolute;
+    top: 40%;
+    left: -30px;
+    z-index: 1;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	font-size: 25px;
+	color: $gray-700;
+}
+
+.mainContent{
+    margin-left: 10%;
+ 
+}

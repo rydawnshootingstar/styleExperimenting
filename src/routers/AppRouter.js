@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import NeumorphicPage from '../pages/NeumorphicPage';
 import MegaMenuPage from '../pages/MegaMenuPage';
 import TherapyPage from '../pages/TherapyPage';
+import BookAppPage from '../pages/BookAppPage';
 import ErrorPage from "../pages/ErrorPage";
 
 
@@ -20,6 +21,7 @@ const AppRouter = () => (
 				<Route path="/" component={MegaMenuPage} exact={true} />
 				<Route path="/therapy" component={TherapyPage} exact={true} />
 				<Route path="/neumorphic" component={NeumorphicPage} exact={true} />
+				<Route path="/bookapp" component={BookAppPage} exact={true} />
 				<Route component={ErrorPage} />
 			</Switch>
 		</div>
