@@ -28,10 +28,10 @@ class MegaMenu extends Component {
 							<img src="assets/whiteX.svg" className={styles.menuButton} onClick={this.closeMenu}></img>
 						</header>
 
-						<ul className={styles.linkList}>
+						<ul>
 							<li>
 								<a href="#">home</a>
-								<span>Welcome home</span>
+								<span>Welcome home bitch</span>
 							</li>
 							<li>
 								<Link to="/neumorphic">Neumorphic Phone Design</Link>
@@ -42,8 +42,8 @@ class MegaMenu extends Component {
 								<span>This one just had nice colors</span>
 							</li>
 							<li>
-								<Link to="/bookapp">Book App</Link>
-								<span>Some book organization app</span>
+								<a href="#">contact</a>
+								<span>Where you can find us</span>
 							</li>
 						</ul>
 					</div>
