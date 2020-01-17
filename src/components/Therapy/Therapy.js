@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import styles from "./therapy.scss";
 
 class Therapy extends Component {
@@ -8,20 +8,22 @@ class Therapy extends Component {
 			<div className={styles.therapyPage}>
 				<div className={styles.therapyContainer}>
 					<div className={styles.therapyLeft}>
-						<ul>
-							<li>
+						<div className={styles.therapyList}>
+							<div className={styles.therapyListItem}>
 								<a href="#">❍❍</a>
-							</li>
-							<li>
-								<Link data-tool-tip={'homepage'} to="/">HOME</Link>
-							</li>
-							<li>
+							</div>
+							<div className={styles.therapyListItem}>
+								<Link data-tool-tip={"homepage"} to="/">
+									HOME
+								</Link>
+							</div>
+							<div className={styles.therapyListItem}>
 								<a href="#">ABOUT</a>
-							</li>
-							<li>
+							</div>
+							<div className={styles.therapyListItem}>
 								<a href="#">HELP</a>
-							</li>
-						</ul>
+							</div>
+						</div>
 
 						<div className={styles.therapyTagline}>Finding yourself with therapy</div>
 
@@ -34,8 +36,8 @@ class Therapy extends Component {
 						<div className={styles.therapyButton}>GET HELP</div>
 					</div>
 					<div className={styles.therapyRight}>
-                        <div className={styles.pinkSection}></div>
-                    </div>
+						<div className={styles.pinkSection}></div>
+					</div>
 				</div>
 			</div>
 		);

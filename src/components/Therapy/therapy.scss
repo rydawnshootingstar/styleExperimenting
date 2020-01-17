@@ -24,8 +24,8 @@
 	margin-top: 5%;
 	margin-left: 5%;
 	display: block;
-	ul {
-		li > a {
+	.therapyList {
+		.therapyListItem > a {
 			font-weight: 350;
 
 			&[data-tool-tip] {
