@@ -1,12 +1,18 @@
 @import "../../styles/partials/variables";
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 .bookAppContainer{
     min-width: 1080px;
 }
 
+<<<<<<< Updated upstream
 =======
 >>>>>>> 355a11f... style links etc
+=======
+>>>>>>> Stashed changes
 .header {
 	margin: 0;
 	padding: 0;
@@ -44,21 +50,29 @@
     margin-left: 20%;
     margin-top: 25px;
     display: flex;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     width: auto;
 =======
 >>>>>>> 355a11f... style links etc
+=======
+    width: auto;
+>>>>>>> Stashed changes
     color: $black;
     line-height: normal;
 }
 .item{
     color: $black;
     margin-left: 80px;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     font-size: 20px;
 =======
     font-size: 25px;
 >>>>>>> 355a11f... style links etc
+=======
+    font-size: 20px;
+>>>>>>> Stashed changes
     cursor: pointer;
     &:hover{
         &::after{
@@ -73,6 +87,7 @@
 }
 
 .headerRightMenu{
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     position: fixed;
     margin-left: 80%;
@@ -95,19 +110,30 @@
 =======
 
     margin-left: 60%;
+=======
+    position: fixed;
+    margin-left: 80%;
+>>>>>>> Stashed changes
     display: flex;
+    line-height: normal;
+    
+}
 
-    &--notifications{
-        &::after{
-            content: ' ';
-            border-radius: 50%;
-            width: 2px;
-            background-color: red; 
-        }
+.notifications{
+    &::after{
+        content: ' ';
+        border-radius: 50%;
+        width: 2px;
+        background-color: red; 
     }
 }
 
+<<<<<<< Updated upstream
 >>>>>>> 355a11f... style links etc
+=======
+
+
+>>>>>>> Stashed changes
 .mainContainer {
 	position: absolute;
 	top: 75px;
