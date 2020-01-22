@@ -1,0 +1,58 @@
+/*
+    Basic styling
+*/
+//small screen
+.appGridContainer {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5em 1fr 1.5em;
+    grid-template-areas:
+    "header header header"
+    "......  main  ....."
+    "......  side  ....."
+    "footer footer footer";
+}
+
+//large screen
+@media only screen and (min-width: 860px){
+    .appGridContainer{
+    grid-template-columns: 1.5em minmax(400px, 50%) minmax(200px, 50%) 1.5em;
+    grid-template-areas:
+    "header header header header"
+    "...... main   side   ......"
+    "footer footer footer footer";
+    }
+}
+
+
+.appGridHeader {
+    grid-area: header;
+    height: 75px;
+    width: 100%;
+	background: #41d3bd;
+}
+.appGridMainContent {
+    grid-area: main;
+	background: #de6449;
+}
+.appGridSidebar {
+    grid-area: side;
+	background: #407899;
+}
+.appGridFooter {
+    grid-area: footer;
+	background: #694d75;
+}
+
+.appGridHeader,
+.appGridMainContent,
+.appGridSidebar,
+.appGridFooter {
+	padding: 2em;
+}
+
+
+

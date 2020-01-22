@@ -14,14 +14,13 @@ class BookMain extends Component {
 		let toggleButtonIcon = sideBarOpen ? faChevronRight : faChevronLeft;
 		return (
 			<div className={mainContainerClass}>
+				<div className={styles.mainContent}>content is cool</div>
 				<div className={sideBarClass}>
 					<div className={styles.toggleButton} onClick={toggleSideBar}>
 						<ToggleButton icon={toggleButtonIcon} />
 					</div>
 					<SideBar />
 				</div>
-
-				<div className={styles.mainContent}>content is cool</div>
 			</div>
 		);
 	}

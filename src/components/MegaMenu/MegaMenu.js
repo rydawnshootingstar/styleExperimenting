@@ -30,8 +30,8 @@ class MegaMenu extends Component {
 
 						<ul className={styles.linkList}>
 							<li>
-								<a href="#">home</a>
-								<span>Welcome home</span>
+								<Link to="/gridpage">Big Time Grid Boiz</Link>
+								<span>Oh yeah baby bring it on home with the grid</span>
 							</li>
 							<li>
 								<Link to="/neumorphic">Neumorphic Phone Design</Link>

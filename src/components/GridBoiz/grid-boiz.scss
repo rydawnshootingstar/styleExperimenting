@@ -1,0 +1,105 @@
+@import "../../styles/partials/variables";
+
+/*
+    Basic styling
+*/
+//small screen
+.gridBoizContainer {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 70px auto;
+    grid-template-areas:
+    "header"
+    "main"
+}
+
+.gridBoizHeader {
+    grid-area: header;
+    background: #de6449;
+    display: grid;
+    grid-template-columns: minmax(250px,11fr) minmax(300px,14fr) minmax(250px,10fr);
+    grid-template-areas: 
+    "logo ...... navlinks ... buttons"
+    ;
+}
+
+.gridBoizLogo{
+    grid-area: logo;
+    background: black;
+}
+
+.gridBoizNavlinks{
+    grid-area: navlinks;
+    background: teal;
+}
+
+.gridBoizButtons{
+    grid-area: buttons;
+    background: cyan;
+}
+
+.gridBoizMain {
+    grid-area: main;
+    background: #49dea2;
+    top: 70px;
+    left: 0;
+	right: 0;
+    transition: left 0.3s ease-in-out;
+    position: absolute;
+    display: flex;
+    overflow-x: hidden;
+	background-color: $gray-500;
+}
+
+.gridBoizSideBar{
+	position: absolute;
+	right: -300px;
+	height: 93vh;
+	width: 300px;
+	transition: right 0.3s ease-in-out;
+    background: white;
+}
+
+.gridBoizSideBarOpen{
+	@extend .gridBoizSideBar;
+    right: 0px;
+}
+
+.gridBoizToggleButton{
+    background-color: $white;
+	display: flex;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	left: -30px;
+	z-index: 1;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	font-size: 25px;
+	color: $gray-700;
+}
+
+.gridBoizMainContent{
+    margin-left: 10%;
+    width: 100%;
+    height: 93vh;
+    background: yellowgreen;
+}
+
+// //large screen
+// @media only screen and (min-width: 860px){
+//     .appGridContainer{
+//     grid-template-columns: 1.5em minmax(400px, 50%) minmax(200px, 50%) 1.5em;
+//     grid-template-areas:
+//     "header"
+//     "main"
+//     }
+// }

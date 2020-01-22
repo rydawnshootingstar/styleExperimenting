@@ -7,7 +7,7 @@ import MegaMenuPage from '../pages/MegaMenuPage';
 import TherapyPage from '../pages/TherapyPage';
 import BookAppPage from '../pages/BookAppPage';
 import ErrorPage from "../pages/ErrorPage";
-
+import GridPage from '../pages/GridPage';
 
 export const history = createBrowserHistory();
 
@@ -20,6 +20,7 @@ const AppRouter = () => (
 				<Route path="/home" component={HomePage} exact={true} />
 				<Route path="/" component={MegaMenuPage} exact={true} />
 				<Route path="/therapy" component={TherapyPage} exact={true} />
+				<Route path="/gridpage" component={GridPage} exact={true} />
 				<Route path="/neumorphic" component={NeumorphicPage} exact={true} />
 				<Route path="/bookapp" component={BookAppPage} exact={true} />
 				<Route component={ErrorPage} />
